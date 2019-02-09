@@ -1,0 +1,190 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="styles/general-styles.css" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<link rel="shortcut icon" href="assets/favicon/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="assets/favicon/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="assets/favicon/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="assets/favicon/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
+	<link rel="apple-touch-icon" href="/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/favicon-180.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="assets/favicon/favicon-144.png">
+	<meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+
+	<title>About Me</title>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127049086-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-127049086-1');
+
+	</script>
+</head>
+
+<body>
+
+	<!-- Mobile Warning -->
+	<div class="mobile-warning">
+		<p>Oops, just noticed you're looking at my site on a phone or tablet<br><br>I'm still working through some styling that might make the site look strange on mobile, so use at your own risk or switch to desktop</p>
+	</div>
+
+	<!-- NAVIGATION -->
+	<div class="navigation">
+		<nav>
+			<div class="navigation-leftItem">
+				<a href="index.html"><img src="assets/homepage.png" alt="back to homepage"></a>
+			</div>
+			<div class="navigation-rightItems" id="topNav">
+				<a href="index.html">Back to All Projects</a>
+				<a href="about.html">About</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    			<i class="fa fa-bars" id="mobileFA"></i> 
+  			</a>
+			</div>
+		</nav>
+	</div>
+
+	<!-- HERO SECTION -->
+	<div class="hero-section">
+		<div class="hero-section__hello">
+			<h1>About Me
+			</h1>
+		</div>
+
+	</div>
+
+	<!-- BODY SECTION -->
+
+	<div class="body-section">
+
+		<!-- checkerboard component -->
+		<div class="checkerboard">
+			<img src="assets/portrait.jpg" style="height: 540px;">
+			<div class="checkerboard__text">
+				<h1>Hey!</h1>
+				<p>I'm a Boston(-ish) based UX and Visual Designer originally from California.
+					<br>
+					<br> I'm a second-year (going on third Fall 2018) student studying computer science and design at Northeastern University. In my time here, I've taken classes ranging from drawing to typography to making shapes move with lines of code.
+					<br>
+					<br>I also went on co-op at OHO Interactive where I did web redesigns for colleges, universities, and healthcare providers.
+					<br>
+					<br>
+					<b><u>Software I Use:</u></b>
+					<br><br> <b>For Design:</b> Sketch, Axure RP, Invision, Adobe XD, Illustrator, Photoshop, Lightroom, InDesign, Premiere Pro
+					<br><br> <b>For CS:</b> Brackets and Atom (HTML/CSS/Javascript), IntelliJ IDEA and Eclipse (Java), Processing/p5 (Java/Javascript)
+					<br>
+					<br>
+					<a href="mailto:chen.melv@husky.neu.edu"><b>Send Me an Email!</b></a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- FOOTER -->
+	<div class="footer ">
+		<div class="footer__top-links ">
+			<a href="index.html"><i class="fa fa-arrow-left"  style=" padding-right: 10px" id="mobileFA"></i> Back to All Projects</a>
+			<a href="about.html ">About Me</a>
+		</div>
+		<div class="hr-div "></div>
+		<div class="footer__bottom-links ">
+			<a href="mailto:chen.melv@husky.neu.edu ">Email</a>
+			<a href="http://www.linkedin.com/in/melvin-c-chen ">LinkedIn</a>
+			<a href="assets/melvinchen-resume-Su18.pdf ">Resume</a>
+		</div>
+	</div>
+
+</body>
+
+<script>
+	function myFunction() {
+		var x = document.getElementById("topNav");
+		var mobileFA = document.getElementById("mobileFA");
+		if (x.className === "navigation-rightItems") {
+			x.className += " navigation--responsive";
+			mobileFA.className = "fa fa-times";
+		} else {
+			x.className = "navigation-rightItems";
+			mobileFA.className = "fa fa-bars";
+		}
+	}
+
+</script>
+
+<style>
+	.hero-section {
+		height: 200px;
+		background-color: #FFAD00;
+		background-repeat: space;
+		background-size: cover;
+		position: relative;
+		padding-left: 140px;
+		padding-right: 140px;
+	}
+
+	.hero-section__hello {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 200px;
+	}
+
+	.checkerboard {
+		height: auto;
+		display: flex;
+		justify-content: space-between;
+		padding-top: 40px;
+	}
+
+	.checkerboard img {
+		width: 500px;
+		height: 500px;
+	}
+
+	.checkerboard__text {
+		width: 560px;
+	}
+
+	.checkerboard h1 {
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+
+	@media only screen and (max-width: 1439px) and (min-width: 640px) {
+		.checkerboard {
+			height: auto;
+		}
+		.checkerboard img {
+			width: 460px;
+			height: 460px;
+		}
+
+		.checkerboard__text {
+			width: 460px;
+		}
+	}
+
+</style>
+
+</html>
